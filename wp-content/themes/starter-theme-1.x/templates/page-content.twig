@@ -1,0 +1,22 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<section class="article-content">
+				<h1 class="article-h1">{{post.title}}</h1>
+				<div class="article-body">
+						
+				<h2> <?php echo($content_page_acf[text_field]); ?> </h2>
+						
+				<h2> {{ content_page_acf.text_field }} </h2>
+				<p> {{ content_page_acf.featured_image_vardump }} </p>
+				<img src="{{ content_page_acf.pic }}"></img>
+
+			
+
+				</div>
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}
